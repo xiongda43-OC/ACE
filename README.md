@@ -1,24 +1,38 @@
 <大师级预算工作室>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>专业报价换算系统</title>
     <style>
         :root {
-            --primary-color: #3a7ca5;  /* 柔和的蓝色 */
-            --secondary-color: #81c3d7; /* 浅蓝色 */
-            --accent-color: #2f6690;   /* 深蓝色 */
-            --dark-color: #16425b;     /* 深蓝底色 */
-            --light-color: #e8f1f2;    /* 浅灰蓝色文字 */
-            --success-color: #4caf50;  /* 柔和的绿色 */
-            --warning-color: #ff9800;  /* 柔和的橙色 */
-            --card-bg: rgba(255, 255, 255, 0.1); /* 半透明白色卡片背景 */
-            --border-color: rgba(255, 255, 255, 0.2); /* 柔和的边框 */
-            --glass-effect: blur(10px); /* 毛玻璃效果 */
-            --grid-color: rgba(129, 195, 215, 0.1); /* 网格线颜色 */
-            --text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* 文字阴影 */
-            --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+            --primary-color: #3a7ca5;
+            /* 柔和的蓝色 */
+            --secondary-color: #81c3d7;
+            /* 浅蓝色 */
+            --accent-color: #2f6690;
+            /* 深蓝色 */
+            --dark-color: #16425b;
+            /* 深蓝底色 */
+            --light-color: #e8f1f2;
+            /* 浅灰蓝色文字 */
+            --success-color: #4caf50;
+            /* 柔和的绿色 */
+            --warning-color: #ff9800;
+            /* 柔和的橙色 */
+            --card-bg: rgba(255, 255, 255, 0.1);
+            /* 半透明白色卡片背景 */
+            --border-color: rgba(255, 255, 255, 0.2);
+            /* 柔和的边框 */
+            --glass-effect: blur(10px);
+            /* 毛玻璃效果 */
+            --grid-color: rgba(129, 195, 215, 0.1);
+            /* 网格线颜色 */
+            --text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            /* 文字阴影 */
+            --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            /* 卡片阴影 */
         }
 
         * {
@@ -36,7 +50,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 20%, rgba(47, 102, 144, 0.2) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(58, 124, 165, 0.2) 0%, transparent 20%);
             background-attachment: fixed;
@@ -50,7 +64,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 linear-gradient(var(--grid-color) 1px, transparent 1px),
                 linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
             background-size: 30px 30px;
@@ -60,8 +74,13 @@
         }
 
         @keyframes gridMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 300px 300px; }
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 300px 300px;
+            }
         }
 
         .container {
@@ -98,8 +117,13 @@
         }
 
         @keyframes backgroundMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-50px, -50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-50px, -50px);
+            }
         }
 
         h1 {
@@ -132,6 +156,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -197,11 +222,22 @@
             left: 100%;
         }
 
-        .card:nth-child(1) { animation-delay: 0.2s; }
-        .card:nth-child(2) { animation-delay: 0.4s; }
-        .card:nth-child(3) { animation-delay: 0.6s; }
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
 
-        select, input, button, .file-input-label {
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        select,
+        input,
+        button,
+        .file-input-label {
             width: 100%;
             background-color: rgba(255, 255, 255, 0.08);
             color: white;
@@ -215,7 +251,10 @@
             position: relative;
         }
 
-        select:focus, input:focus, button:focus, .file-input-label:focus {
+        select:focus,
+        input:focus,
+        button:focus,
+        .file-input-label:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(129, 195, 215, 0.5);
             border-color: var(--secondary-color);
@@ -236,7 +275,8 @@
             border: none;
         }
 
-        button, .file-input-label {
+        button,
+        .file-input-label {
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
             font-weight: 500;
@@ -251,18 +291,21 @@
             text-shadow: var(--text-shadow);
         }
 
-        button:hover, .file-input-label:hover {
+        button:hover,
+        .file-input-label:hover {
             background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        button:active, .file-input-label:active {
+        button:active,
+        .file-input-label:active {
             transform: translateY(0);
             box-shadow: none;
         }
 
-        button::before, .file-input-label::before {
+        button::before,
+        .file-input-label::before {
             content: '';
             position: absolute;
             top: 0;
@@ -273,7 +316,8 @@
             transition: all 0.6s ease;
         }
 
-        button:hover::before, .file-input-label:hover::before {
+        button:hover::before,
+        .file-input-label:hover::before {
             left: 100%;
         }
 
@@ -345,11 +389,11 @@
             .desktop-table {
                 display: none;
             }
-            
+
             .mobile-table {
                 display: block;
             }
-            
+
             .mobile-table .record {
                 border: 1px solid var(--border-color);
                 border-radius: 10px;
@@ -361,7 +405,7 @@
                 overflow: hidden;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             }
-            
+
             .mobile-table .record::before {
                 content: '';
                 position: absolute;
@@ -372,11 +416,11 @@
                 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent);
                 transition: all 0.6s ease;
             }
-            
+
             .mobile-table .record:hover::before {
                 left: 100%;
             }
-            
+
             .mobile-table .record-header {
                 display: flex;
                 justify-content: space-between;
@@ -385,44 +429,45 @@
                 padding-bottom: 15px;
                 border-bottom: 1px solid var(--border-color);
             }
-            
+
             .mobile-table .record-id {
                 font-weight: bold;
                 color: var(--secondary-color);
                 font-size: 1.1rem;
                 text-shadow: var(--text-shadow);
             }
-            
+
             .mobile-table .record-details {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 15px;
             }
-            
+
             .mobile-table .detail-item {
                 padding: 8px;
                 border-radius: 6px;
                 background: rgba(255, 255, 255, 0.03);
                 transition: all 0.2s ease;
             }
-            
+
             .mobile-table .detail-item:hover {
                 background: rgba(255, 255, 255, 0.05);
             }
-            
+
             .mobile-table .detail-label {
                 font-size: 0.9rem;
                 color: var(--secondary-color);
                 margin-bottom: 3px;
                 text-shadow: var(--text-shadow);
             }
-            
+
             .mobile-table .delete-btn {
                 margin-top: 15px;
             }
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid var(--border-color);
             padding: clamp(8px, 2vw, 15px);
             text-align: left;
@@ -572,7 +617,8 @@
             margin-top: 15px;
         }
 
-        .batch-results th, .batch-results td {
+        .batch-results th,
+        .batch-results td {
             padding: 10px 15px;
         }
 
@@ -724,26 +770,65 @@
             box-shadow: 0 0 5px rgba(129, 195, 215, 0.3);
         }
 
-        .calculating-number:nth-child(1) { animation-delay: 0s; }
-        .calculating-number:nth-child(2) { animation-delay: 1s; }
-        .calculating-number:nth-child(3) { animation-delay: 2s; }
+        .calculating-number:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .calculating-number:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .calculating-number:nth-child(3) {
+            animation-delay: 2s;
+        }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes fadeInNumber {
-            0% { opacity: 0; transform: scale(0.5); }
-            20% { opacity: 1; transform: scale(1); }
-            80% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(0.5); }
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            20% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(129, 195, 215, 0.4); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(129, 195, 215, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(129, 195, 215, 0); }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(129, 195, 215, 0.4);
+            }
+
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(129, 195, 215, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(129, 195, 215, 0);
+            }
         }
 
         .pulse {
@@ -755,8 +840,13 @@
         }
 
         @keyframes underline {
-            from { width: 0; }
-            to { width: 100%; }
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
         /* 自定义滚动条 */
@@ -764,22 +854,23 @@
             width: 8px;
             height: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: rgba(129, 195, 215, 0.3);
             border-radius: 10px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(129, 195, 215, 0.5);
         }
     </style>
 </head>
+
 <body>
     <div class="toast" id="toast"></div>
     <div id="calculating-overlay">
@@ -878,7 +969,7 @@
                 </thead>
                 <tbody></tbody>
             </table>
-            
+
             <!-- 移动端表格 -->
             <div id="mobile-history" class="mobile-table"></div>
         </div>
@@ -892,7 +983,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // 获取DOM元素
             const projectSelect = document.getElementById('project');
             const controlPriceInput = document.getElementById('control-price');
@@ -925,11 +1016,11 @@
                 const historyData = localStorage.getItem(HISTORY_KEY);
                 if (historyData) {
                     const historyArray = JSON.parse(historyData);
-                    
+
                     // 清空现有表格
                     historyTable.innerHTML = '';
                     mobileHistory.innerHTML = '';
-                    
+
                     // 渲染历史记录
                     historyArray.forEach((item, index) => {
                         // 桌面端表格
@@ -944,7 +1035,7 @@
                             <td>${item.timestamp}</td>
                             <td><button class="delete-btn" data-id="${item.index}">删除</button></td>
                         `;
-                        
+
                         // 移动端表格
                         const mobileRecord = document.createElement('div');
                         mobileRecord.className = 'record';
@@ -982,350 +1073,187 @@
                         `;
                         mobileHistory.appendChild(mobileRecord);
                     });
-                    
+
                     // 绑定删除按钮事件
                     bindDeleteEvents();
                 }
             }
 
-            // 保存历史记录到本地存储
-            function saveHistory(historyArray) {
-                localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArray));
-            }
-
             // 绑定删除按钮事件
             function bindDeleteEvents() {
-                document.querySelectorAll('.delete-btn').forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const recordId = parseInt(this.getAttribute('data-id'));
-                        deleteRecord(recordId);
+                const deleteButtons = document.querySelectorAll('.delete-btn');
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = this.getAttribute('data-id');
+                        const historyData = localStorage.getItem(HISTORY_KEY);
+                        if (historyData) {
+                            let historyArray = JSON.parse(historyData);
+                            historyArray = historyArray.filter(item => item.index != id);
+                            localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArray));
+                            loadHistory();
+                        }
                     });
                 });
             }
 
-            // 删除单条记录
-            function deleteRecord(id) {
-                if (confirm('确定要删除这条记录吗？')) {
-                    let historyArray = JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
-                    
-                    // 过滤掉要删除的记录
-                    historyArray = historyArray.filter(item => item.index !== id);
-                    
-                    // 更新序号
-                    historyArray.forEach((item, index) => {
-                        item.index = index + 1;
-                    });
-                    
-                    // 保存到本地存储
-                    saveHistory(historyArray);
-                    
-                    // 重新渲染表格
-                    loadHistory();
-                    
-                    showToast('记录已删除');
-                }
+            // 显示加载动画
+            function showLoading() {
+                calculatingOverlay.classList.add('active');
+                loader.style.display = 'inline-block';
+                calculateBtn.disabled = true;
+
+                // 倒计时动画
+                countNumbers.forEach((number, index) => {
+                    setTimeout(() => {
+                        number.style.opacity = 1;
+                        setTimeout(() => {
+                            number.style.opacity = 0;
+                        }, 1000);
+                    }, index * 1000);
+                });
             }
 
-            // 显示提示消息
+            // 隐藏加载动画
+            function hideLoading() {
+                calculatingOverlay.classList.remove('active');
+                loader.style.display = 'none';
+                calculateBtn.disabled = false;
+            }
+
+            // 显示提示框
             function showToast(message) {
                 toast.textContent = message;
-                toast.style.display = 'block';
+                toast.classList.add('show');
                 setTimeout(() => {
-                    toast.classList.add('show');
-                    setTimeout(() => {
-                        toast.classList.remove('show');
-                        setTimeout(() => {
-                            toast.style.display = 'none';
-                        }, 300);
-                    }, 3000);
-                }, 10);
+                    toast.classList.remove('show');
+                }, 3000);
             }
 
-            // 项目选择变化时更新控制价和Z值
-            projectSelect.addEventListener('change', function() {
-                const selectedOption = this.options[this.selectedIndex];
-                if (selectedOption.value) {
-                    controlPriceInput.value = parseFloat(selectedOption.getAttribute('data-control')).toFixed(2);
-                    zValueInput.value = parseFloat(selectedOption.getAttribute('data-z')).toFixed(2);
-                    
-                    // 添加选择动画效果
-                    this.classList.add('highlight-selection');
-                    setTimeout(() => {
-                        this.classList.remove('highlight-selection');
-                    }, 300);
-                }
+            // 计算报价
+            function calculateQuote() {
+                showLoading();
+
+                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
+                const controlPrice = parseFloat(selectedProject.getAttribute('data-control'));
+                const zValue = parseFloat(selectedProject.getAttribute('data-z'));
+                const coefficient = parseFloat(coefficientInput.value);
+
+                const finalPrice = (controlPrice - zValue) * coefficient + zValue;
+
+                setTimeout(() => {
+                    hideLoading();
+                    resultDiv.classList.add('show');
+                    finalPriceSpan.textContent = finalPrice.toFixed(2);
+                    formulaControl.textContent = controlPrice.toFixed(2);
+                    formulaZ.textContent = zValue.toFixed(2);
+                    formulaCoefficient.textContent = coefficient.toFixed(2);
+                    formulaZ2.textContent = zValue.toFixed(2);
+
+                    // 保存历史记录
+                    const timestamp = new Date().toLocaleString();
+                    const historyData = localStorage.getItem(HISTORY_KEY);
+                    let historyArray = historyData ? JSON.parse(historyData) : [];
+                    const newIndex = historyArray.length + 1;
+                    historyArray.push({
+                        index: newIndex,
+                        projectName: selectedProject.textContent,
+                        controlPrice: controlPrice.toFixed(2),
+                        zValue: zValue.toFixed(2),
+                        coefficient: coefficient.toFixed(2),
+                        finalPrice: finalPrice.toFixed(2),
+                        timestamp: timestamp
+                    });
+                    localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArray));
+
+                    // 重新加载历史记录
+                    loadHistory();
+
+                    // 显示提示框
+                    showToast('计算完成，请下滑查看历史报价');
+                }, 2000);
+            }
+
+            // 项目选择事件
+            projectSelect.addEventListener('change', function () {
+                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
+                controlPriceInput.value = selectedProject.getAttribute('data-control');
+                zValueInput.value = selectedProject.getAttribute('data-z');
             });
 
             // 计算按钮点击事件
-            calculateBtn.addEventListener('click', function() {
-                if (!projectSelect.value) {
-                    showToast('请先选择项目');
-                    return;
-                }
-                
-                const coefficient = parseFloat(coefficientInput.value);
-                if (isNaN(coefficient) || coefficient < 0.87 || coefficient > 0.97) {
-                    showToast('请输入有效系数(0.87-0.97)');
-                    return;
-                }
-                
-                // 显示加载动画
-                loader.style.display = 'inline-block';
-                calculateBtn.disabled = true;
-                
-                // 显示3秒倒计时动画
-                calculatingOverlay.classList.add('active');
-                
-                // 重置数字动画
-                countNumbers.forEach(num => {
-                    num.style.opacity = '0';
-                    num.style.transform = 'scale(0.5)';
-                });
-                
-                // 3秒倒计时
-                let countdown = 3;
-                const countdownInterval = setInterval(() => {
-                    countdown--;
-                    
-                    if (countdown === 0) {
-                        clearInterval(countdownInterval);
-                        
-                        // 隐藏倒计时覆盖层
-                        setTimeout(() => {
-                            calculatingOverlay.classList.remove('active');
-                            
-                            try {
-                                const selectedOption = projectSelect.options[projectSelect.selectedIndex];
-                                const controlPrice = parseFloat(selectedOption.getAttribute('data-control'));
-                                const zValue = parseFloat(selectedOption.getAttribute('data-z'));
-                                const finalPrice = (controlPrice - zValue) * coefficient + zValue;
-                                
-                                // 更新公式显示
-                                formulaControl.textContent = controlPrice.toFixed(2);
-                                formulaZ.textContent = zValue.toFixed(2);
-                                formulaCoefficient.textContent = coefficient;
-                                formulaZ2.textContent = zValue.toFixed(2);
-                                
-                                // 显示结果并添加动画效果
-                                finalPriceSpan.textContent = finalPrice.toFixed(2);
-                                resultDiv.classList.add('show');
-                                
-                                // 结果值添加脉冲动画
-                                finalPriceSpan.classList.add('pulse');
-                                setTimeout(() => {
-                                    finalPriceSpan.classList.remove('pulse');
-                                }, 1000);
-                                
-                                // 构建历史记录对象
-                                let historyArray = JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
-                                const newRecord = {
-                                    index: historyArray.length + 1,
-                                    projectName: selectedOption.text,
-                                    controlPrice: controlPrice.toFixed(2),
-                                    zValue: zValue.toFixed(2),
-                                    coefficient: coefficient,
-                                    finalPrice: finalPrice.toFixed(2),
-                                    timestamp: new Date().toLocaleString('zh-CN')
-                                };
-                                
-                                // 添加到DOM和本地存储
-                                historyArray.unshift(newRecord); // 添加到数组开头，保持最新记录在顶部
-                                saveHistory(historyArray);
-                                
-                                // 重新渲染表格
-                                loadHistory();
-                                
-                                showToast('计算完成，已添加到历史记录');
-                            } catch (error) {
-                                showToast('计算过程中发生错误');
-                                console.error('计算错误:', error);
-                            } finally {
-                                // 隐藏加载动画
-                                loader.style.display = 'none';
-                                calculateBtn.disabled = false;
-                            }
-                        }, 500);
-                    }
-                }, 1000);
-            });
+            calculateBtn.addEventListener('click', calculateQuote);
 
-            // 批量导入系数文件
-            batchFileInput.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (!file) return;
-                
-                batchFileName.textContent = file.name;
-                
-                // 显示加载状态
-                batchFileName.innerHTML = `<span class="loader" style="display: inline-block;"></span> 正在处理...`;
-                
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
+            // 批量上传文件事件
+            batchFileInput.addEventListener('change', function () {
+                const file = this.files[0];
+                if (file) {
+                    batchFileName.textContent = file.name;
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
                         const content = e.target.result;
-                        const coefficients = parseCoefficientFile(content);
-                        
-                        if (coefficients.length === 0) {
-                            throw new Error('未找到有效系数');
-                        }
-                        
-                        // 显示批量计算结果
-                        let resultHtml = `<div class="batch-results card">
-                            <h3>批量计算结果</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>系数</th>
-                                        <th>最终报价</th>
-                                    </tr>
-                                </thead>
-                                <tbody>`;
-                        
-                        const selectedOption = projectSelect.options[projectSelect.selectedIndex];
-                        if (!selectedOption.value) {
-                            showToast('请先选择项目');
-                            return;
-                        }
-                        
-                        const controlPrice = parseFloat(selectedOption.getAttribute('data-control'));
-                        const zValue = parseFloat(selectedOption.getAttribute('data-z'));
-                        
-                        coefficients.forEach(coefficient => {
-                            if (isNaN(coefficient) || coefficient < 0.87 || coefficient > 0.97) {
-                                resultHtml += `<tr><td>${coefficient}</td><td>无效系数</td></tr>`;
-                                return;
+                        const lines = content.split('\n');
+                        const results = [];
+                        lines.forEach(line => {
+                            const coefficient = parseFloat(line.trim());
+                            if (!isNaN(coefficient) && coefficient >= 0.87 && coefficient <= 0.97) {
+                                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
+                                const controlPrice = parseFloat(selectedProject.getAttribute('data-control'));
+                                const zValue = parseFloat(selectedProject.getAttribute('data-z'));
+                                const finalPrice = (controlPrice - zValue) * coefficient + zValue;
+                                results.push({
+                                    coefficient: coefficient.toFixed(2),
+                                    finalPrice: finalPrice.toFixed(2)
+                                });
                             }
-                            
-                            const finalPrice = (controlPrice - zValue) * coefficient + zValue;
-                            resultHtml += `<tr>
-                                <td>${coefficient}</td>
-                                <td>${finalPrice.toFixed(2)}</td>
-                            </tr>`;
                         });
-                        
-                        resultHtml += `</tbody></table></div>`;
-                        
-                        // 插入到结果区域
-                        const resultDiv = document.getElementById('result');
-                        const batchResults = document.querySelector('.batch-results');
-                        
-                        if (batchResults) {
-                            batchResults.remove();
+
+                        if (results.length > 0) {
+                            let batchResultHTML = '<table class="batch-results"><thead><tr><th>系数</th><th>最终报价</th></tr></thead><tbody>';
+                            results.forEach(result => {
+                                batchResultHTML += `<tr><td>${result.coefficient}</td><td>${result.finalPrice}</td></tr>`;
+                            });
+                            batchResultHTML += '</tbody></table>';
+                            showToast('批量计算完成，结果如下：' + batchResultHTML);
+                        } else {
+                            showToast('文件中没有有效的系数。');
                         }
-                        
-                        resultDiv.insertAdjacentHTML('afterend', resultHtml);
-                        
-                        showToast(`成功导入 ${coefficients.length} 个系数`);
-                    } catch (error) {
-                        showToast(`导入失败: ${error.message}`);
-                        console.error(error);
-                    } finally {
-                        // 恢复原始文本
-                        batchFileName.textContent = file.name;
-                    }
-                };
-                
-                reader.readAsText(file);
+                    };
+                    reader.readAsText(file);
+                }
             });
 
-            // 解析系数文件
-            function parseCoefficientFile(content) {
-                // 处理CSV或TXT文件
-                // 支持格式: 单行多个系数(用逗号、空格或制表符分隔)或每行一个系数
-                const coefficients = [];
-                
-                // 按行分割
-                const lines = content.split(/\r?\n/);
-                
-                lines.forEach(line => {
-                    // 跳过空行
-                    if (!line.trim()) return;
-                    
-                    // 尝试按逗号、空格或制表符分割
-                    const parts = line.split(/[,\s\t]+/);
-                    
-                    parts.forEach(part => {
-                        const num = parseFloat(part);
-                        if (!isNaN(num)) {
-                            coefficients.push(num);
-                        }
-                    });
-                });
-                
-                return coefficients;
-            }
-
-            // 下载历史记录（从本地存储获取数据）
-            document.getElementById('download-history').addEventListener('click', function() {
-                const historyData = localStorage.getItem(HISTORY_KEY);
-                if (!historyData || JSON.parse(historyData).length === 0) {
-                    showToast('没有历史记录可下载');
-                    return;
-                }
-                
-                const password = prompt('请输入导出密码(请联系管理员:19907003214):', '');
-                if (password !== EXPORT_PASSWORD) {
-                    showToast('密码错误');
-                    return;
-                }
-                
-                // 显示加载动画
-                this.innerHTML = `<span class="loader" style="display: inline-block;"></span> 准备下载...`;
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    try {
+            // 下载历史记录
+            document.getElementById('download-history').addEventListener('click', function () {
+                const password = prompt('请输入导出密码：');
+                if (password === EXPORT_PASSWORD) {
+                    const historyData = localStorage.getItem(HISTORY_KEY);
+                    if (historyData) {
                         const historyArray = JSON.parse(historyData);
                         let csvContent = "序号,项目名称,控制价,Z值,系数,最终报价,计算时间\n";
-                        
                         historyArray.forEach(item => {
-                            csvContent += `${item.index},"${item.projectName}",${item.controlPrice},${item.zValue},${item.coefficient},${item.finalPrice},"${item.timestamp}"\n`;
+                            csvContent += `${item.index},${item.projectName},${item.controlPrice},${item.zValue},${item.coefficient},${item.finalPrice},${item.timestamp}\n`;
                         });
-                        
-                        const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
-                        const url = URL.createObjectURL(blob);
+                        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
                         const link = document.createElement('a');
-                        link.href = url;
-                        link.download = `报价历史_${new Date().toISOString().slice(0,10)}.csv`;
-                        link.click();
-                        
-                        showToast('历史记录下载成功');
-                    } catch (error) {
-                        showToast('下载过程中发生错误');
-                        console.error('下载错误:', error);
-                    } finally {
-                        // 恢复按钮原状
-                        this.innerHTML = '下载历史记录 (CSV)';
-                        this.disabled = false;
+                        if (link.download !== undefined) {
+                            const url = URL.createObjectURL(blob);
+                            link.setAttribute('href', url);
+                            link.setAttribute('download', 'quote_history.csv');
+                            link.style.visibility = 'hidden';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }
                     }
-                }, 800);
+                } else {
+                    showToast('密码错误，请联系管理员获取正确密码。');
+                }
             });
 
-            // 初始化时加载历史记录
+            // 初始化
             loadHistory();
-
-            // 自检
-            function selfCheck() {
-                try {
-                    // 测试计算公式
-                    const test = (100 - 10) * 0.9 + 10;
-                    if (Math.abs(test - 91) > 0.0001) throw new Error('计算公式错误');
-                    
-                    // 测试DOM元素
-                    const elements = [projectSelect, controlPriceInput, resultDiv, formulaControl];
-                    elements.forEach(el => {
-                        if (!el) throw new Error(`缺少DOM元素: ${el.id}`);
-                    });
-                    
-                    console.log('自检通过');
-                    return true;
-                } catch (e) {
-                    console.error('自检失败:', e);
-                    return false;
-                }
-            }
-            selfCheck();
         });
     </script>
 </body>
+
 </html>
