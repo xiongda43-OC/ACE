@@ -1,4 +1,4 @@
-<大师级预算工作室>
+<江西省专业工作室>
 <html lang="zh-CN">
 
 <head>
@@ -8,31 +8,19 @@
     <style>
         :root {
             --primary-color: #3a7ca5;
-            /* 柔和的蓝色 */
             --secondary-color: #81c3d7;
-            /* 浅蓝色 */
             --accent-color: #2f6690;
-            /* 深蓝色 */
             --dark-color: #16425b;
-            /* 深蓝底色 */
             --light-color: #e8f1f2;
-            /* 浅灰蓝色文字 */
             --success-color: #4caf50;
-            /* 柔和的绿色 */
             --warning-color: #ff9800;
-            /* 柔和的橙色 */
             --card-bg: rgba(255, 255, 255, 0.1);
-            /* 半透明白色卡片背景 */
             --border-color: rgba(255, 255, 255, 0.2);
-            /* 柔和的边框 */
             --glass-effect: blur(10px);
-            /* 毛玻璃效果 */
             --grid-color: rgba(129, 195, 215, 0.1);
-            /* 网格线颜色 */
             --text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            /* 文字阴影 */
             --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            /* 卡片阴影 */
+            --transition-duration: 0.3s;
         }
 
         * {
@@ -56,7 +44,6 @@
             background-attachment: fixed;
         }
 
-        /* 网格背景 */
         body::before {
             content: '';
             position: fixed;
@@ -192,7 +179,7 @@
             padding: clamp(15px, 3vw, 30px);
             margin-bottom: clamp(15px, 3vw, 30px);
             backdrop-filter: var(--glass-effect);
-            transition: all 0.3s ease;
+            transition: all var(--transition-duration) ease;
             position: relative;
             overflow: hidden;
             opacity: 0;
@@ -247,7 +234,7 @@
             border-radius: 8px;
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             -webkit-appearance: none;
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
             position: relative;
         }
 
@@ -267,7 +254,6 @@
             cursor: pointer;
         }
 
-        /* 优化选项样式 */
         select option {
             padding: 12px 15px;
             background-color: var(--dark-color);
@@ -289,6 +275,7 @@
             justify-content: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-shadow: var(--text-shadow);
+            min-height: 50px;
         }
 
         button:hover,
@@ -323,7 +310,7 @@
 
         .result {
             display: none;
-            animation: fadeIn 0.5s ease forwards;
+            animation: fadeIn var(--transition-duration) ease forwards;
         }
 
         .result.show {
@@ -340,7 +327,7 @@
             padding: clamp(15px, 3vw, 30px);
             border-radius: 12px;
             border-left: 6px solid var(--secondary-color);
-            transition: all 0.3s ease;
+            transition: all var(--transition-duration) ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -380,7 +367,10 @@
             box-shadow: var(--card-shadow);
         }
 
-        /* 移动端表格优化 */
+        .desktop-table {
+            display: table;
+        }
+
         .mobile-table {
             display: none;
         }
@@ -400,7 +390,7 @@
                 margin-bottom: 15px;
                 padding: 15px;
                 background: rgba(255, 255, 255, 0.03);
-                transition: all 0.2s ease;
+                transition: all var(--transition-duration) ease;
                 position: relative;
                 overflow: hidden;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -447,7 +437,7 @@
                 padding: 8px;
                 border-radius: 6px;
                 background: rgba(255, 255, 255, 0.03);
-                transition: all 0.2s ease;
+                transition: all var(--transition-duration) ease;
             }
 
             .mobile-table .detail-item:hover {
@@ -472,7 +462,7 @@
             padding: clamp(8px, 2vw, 15px);
             text-align: left;
             font-size: clamp(0.85rem, 2vw, 1rem);
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
         }
 
         th {
@@ -497,7 +487,24 @@
         tbody tr:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateX(2px);
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
+        }
+
+        /* 优化历史报价记录的UI显示 */
+        #history-table th {
+            background-color: var(--accent-color);
+        }
+
+        #history-table td {
+            color: var(--light-color);
+        }
+
+        #history-table tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        #history-table tr:hover {
+            background-color: rgba(129, 195, 215, 0.1);
         }
 
         footer {
@@ -524,7 +531,7 @@
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             overflow-x: auto;
             position: relative;
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
             opacity: 0;
             transform: translateY(10px);
             animation: fadeInUp 0.8s ease forwards 0.5s;
@@ -552,7 +559,7 @@
             font-weight: 500;
             text-decoration: none;
             position: relative;
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
         }
 
         .highlight:hover {
@@ -570,7 +577,6 @@
             animation: underline 0.3s ease forwards;
         }
 
-        /* 新增删除按钮样式 */
         .delete-btn {
             background: linear-gradient(135deg, #e53935, #b71c1c);
             color: white;
@@ -581,7 +587,7 @@
             font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             margin: 0 auto;
             display: block;
-            transition: all 0.2s ease;
+            transition: all var(--transition-duration) ease;
             position: relative;
             overflow: hidden;
             text-shadow: var(--text-shadow);
@@ -612,7 +618,6 @@
             left: 100%;
         }
 
-        /* 批量结果样式 */
         .batch-results table {
             margin-top: 15px;
         }
@@ -622,7 +627,6 @@
             padding: 10px 15px;
         }
 
-        /* 提示框样式 */
         #toast {
             position: fixed;
             bottom: clamp(20px, 4vw, 40px);
@@ -635,7 +639,7 @@
             z-index: 100;
             font-size: clamp(0.85rem, 2vw, 1rem);
             opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
             max-width: 80%;
             text-align: center;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -648,7 +652,6 @@
             transform: translateX(-50%) translateY(-10px);
         }
 
-        /* 加载动画 */
         .loader {
             display: inline-block;
             width: 20px;
@@ -660,7 +663,6 @@
             margin-right: 10px;
         }
 
-        /* 计算动画遮罩 */
         #calculating-overlay {
             position: fixed;
             top: 0;
@@ -849,7 +851,6 @@
             }
         }
 
-        /* 自定义滚动条 */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -867,6 +868,134 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(129, 195, 215, 0.5);
+        }
+
+        .single-result {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(129, 195, 215, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all var(--transition-duration) ease;
+        }
+
+        .single-result.show {
+            display: block;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .single-result .result-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            transition: all var(--transition-duration) ease;
+        }
+
+        .single-result .result-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(2px);
+        }
+
+        .single-result .result-label {
+            color: var(--secondary-color);
+            font-weight: 500;
+            text-shadow: var(--text-shadow);
+        }
+
+        .single-result .result-value {
+            color: white;
+            font-size: 1.1rem;
+            text-shadow: var(--text-shadow);
+        }
+
+        .batch-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* 新增：移动端键盘适配 */
+        @media (max-width: 767px) {
+            body.keyboard-open .container {
+                padding-bottom: 250px;
+            }
+        }
+
+        /* 新增：触摸反馈效果 */
+        select,
+        input,
+        button,
+        .file-input-label,
+        .delete-btn {
+            -webkit-tap-highlight-color: rgba(129, 195, 215, 0.2);
+        }
+
+        /* 新增：表单元素聚焦状态 */
+        select:focus,
+        input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 新增：页面进入动画 */
+        .page-enter {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .page-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 500ms, transform 500ms;
+        }
+
+        /* 新增：结果显示动画 */
+        .result-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .result-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 300ms, transform 300ms;
+        }
+
+        /* 新增：按钮点击波纹效果 */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 600ms linear;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* 新增：计算报价按钮提示 */
+        .calculate-hint {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .calculate-hint .wechat {
+            color: var(--secondary-color);
+            cursor: pointer;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -930,6 +1059,35 @@
                 <span class="loader"></span>
                 <span>计算报价</span>
             </button>
+            <!-- 新增：计算报价提示 -->
+            <div class="calculate-hint">
+                如需组价请添加微信 <span class="wechat" id="wechat-number">19907003214</span>
+            </div>
+
+            <!-- 单次计算结果显示区域 -->
+            <div class="single-result" id="single-result">
+                <h3>单次计算结果</h3>
+                <div class="result-item">
+                    <div class="result-label">项目名称:</div>
+                    <div class="result-value" id="single-project-name">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">控制价:</div>
+                    <div class="result-value" id="single-control-price">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Z值:</div>
+                    <div class="result-value" id="single-z-value">-</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">系数:</div>
+                    <div class="result-value" id="single-coefficient">-</div>
+                </div>
+                <div class="result-item pulse">
+                    <div class="result-label">最终报价:</div>
+                    <div class="result-value" id="single-final-price">-</div>
+                </div>
+            </div>
 
             <div class="batch-section">
                 <h3>批量操作</h3>
@@ -990,137 +1148,38 @@
             const zValueInput = document.getElementById('z-value');
             const coefficientInput = document.getElementById('coefficient');
             const calculateBtn = document.getElementById('calculate-btn');
-            const resultDiv = document.getElementById('result');
-            const finalPriceSpan = document.getElementById('final-price');
-            const historyTable = document.getElementById('history-table').getElementsByTagName('tbody')[0];
-            const mobileHistory = document.getElementById('mobile-history');
+            const singleResult = document.getElementById('single-result');
+            const singleProjectName = document.getElementById('single-project-name');
+            const singleControlPrice = document.getElementById('single-control-price');
+            const singleZValue = document.getElementById('single-z-value');
+            const singleCoefficient = document.getElementById('single-coefficient');
+            const singleFinalPrice = document.getElementById('single-final-price');
+            const result = document.getElementById('result');
+            const finalPrice = document.getElementById('final-price');
             const formulaControl = document.getElementById('formula-control');
             const formulaZ = document.getElementById('formula-z');
             const formulaCoefficient = document.getElementById('formula-coefficient');
             const formulaZ2 = document.getElementById('formula-z2');
-            const batchFileInput = document.getElementById('batch-coefficient');
-            const batchFileName = document.getElementById('batch-file-name');
-            const EXPORT_PASSWORD = "9420";
-            const HISTORY_KEY = "quoteHistory"; // 本地存储键名
-            const calculatingOverlay = document.getElementById('calculating-overlay');
-            const countNumbers = [
-                document.getElementById('count-3'),
-                document.getElementById('count-2'),
-                document.getElementById('count-1')
-            ];
-            const loader = document.querySelector('.loader');
+            const historyTable = document.getElementById('history-table').getElementsByTagName('tbody')[0];
+            const mobileHistory = document.getElementById('mobile-history');
             const toast = document.getElementById('toast');
+            const calculatingOverlay = document.getElementById('calculating-overlay');
+            const wechatNumber = document.getElementById('wechat-number');
 
-            // 从本地存储加载历史记录
-            function loadHistory() {
-                const historyData = localStorage.getItem(HISTORY_KEY);
-                if (historyData) {
-                    const historyArray = JSON.parse(historyData);
+            // 微信点击事件
+            wechatNumber.addEventListener('click', function () {
+                const text = this.textContent;
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('微信账号已复制');
+                window.location.href = `weixin://`;
+            });
 
-                    // 清空现有表格
-                    historyTable.innerHTML = '';
-                    mobileHistory.innerHTML = '';
-
-                    // 渲染历史记录
-                    historyArray.forEach((item, index) => {
-                        // 桌面端表格
-                        const row = historyTable.insertRow(index);
-                        row.innerHTML = `
-                            <td>${item.index}</td>
-                            <td>${item.projectName}</td>
-                            <td>${item.controlPrice}</td>
-                            <td>${item.zValue}</td>
-                            <td>${item.coefficient}</td>
-                            <td>${item.finalPrice}</td>
-                            <td>${item.timestamp}</td>
-                            <td><button class="delete-btn" data-id="${item.index}">删除</button></td>
-                        `;
-
-                        // 移动端表格
-                        const mobileRecord = document.createElement('div');
-                        mobileRecord.className = 'record';
-                        mobileRecord.innerHTML = `
-                            <div class="record-header">
-                                <div class="record-id">记录 #${item.index}</div>
-                                <button class="delete-btn" data-id="${item.index}">删除</button>
-                            </div>
-                            <div class="record-details">
-                                <div class="detail-item">
-                                    <div class="detail-label">项目名称</div>
-                                    <div>${item.projectName}</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">控制价</div>
-                                    <div>${item.controlPrice}</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">Z值</div>
-                                    <div>${item.zValue}</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">系数</div>
-                                    <div>${item.coefficient}</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">最终报价</div>
-                                    <div>${item.finalPrice}</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">计算时间</div>
-                                    <div>${item.timestamp}</div>
-                                </div>
-                            </div>
-                        `;
-                        mobileHistory.appendChild(mobileRecord);
-                    });
-
-                    // 绑定删除按钮事件
-                    bindDeleteEvents();
-                }
-            }
-
-            // 绑定删除按钮事件
-            function bindDeleteEvents() {
-                const deleteButtons = document.querySelectorAll('.delete-btn');
-                deleteButtons.forEach(button => {
-                    button.addEventListener('click', function () {
-                        const id = this.getAttribute('data-id');
-                        const historyData = localStorage.getItem(HISTORY_KEY);
-                        if (historyData) {
-                            let historyArray = JSON.parse(historyData);
-                            historyArray = historyArray.filter(item => item.index != id);
-                            localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArray));
-                            loadHistory();
-                        }
-                    });
-                });
-            }
-
-            // 显示加载动画
-            function showLoading() {
-                calculatingOverlay.classList.add('active');
-                loader.style.display = 'inline-block';
-                calculateBtn.disabled = true;
-
-                // 倒计时动画
-                countNumbers.forEach((number, index) => {
-                    setTimeout(() => {
-                        number.style.opacity = 1;
-                        setTimeout(() => {
-                            number.style.opacity = 0;
-                        }, 1000);
-                    }, index * 1000);
-                });
-            }
-
-            // 隐藏加载动画
-            function hideLoading() {
-                calculatingOverlay.classList.remove('active');
-                loader.style.display = 'none';
-                calculateBtn.disabled = false;
-            }
-
-            // 显示提示框
+            // 显示提示信息
             function showToast(message) {
                 toast.textContent = message;
                 toast.classList.add('show');
@@ -1129,129 +1188,124 @@
                 }, 3000);
             }
 
-            // 计算报价
-            function calculateQuote() {
-                showLoading();
-
-                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
-                const controlPrice = parseFloat(selectedProject.getAttribute('data-control'));
-                const zValue = parseFloat(selectedProject.getAttribute('data-z'));
-                const coefficient = parseFloat(coefficientInput.value);
-
-                const finalPrice = (controlPrice - zValue) * coefficient + zValue;
-
-                setTimeout(() => {
-                    hideLoading();
-                    resultDiv.classList.add('show');
-                    finalPriceSpan.textContent = finalPrice.toFixed(2);
-                    formulaControl.textContent = controlPrice.toFixed(2);
-                    formulaZ.textContent = zValue.toFixed(2);
-                    formulaCoefficient.textContent = coefficient.toFixed(2);
-                    formulaZ2.textContent = zValue.toFixed(2);
-
-                    // 保存历史记录
-                    const timestamp = new Date().toLocaleString();
-                    const historyData = localStorage.getItem(HISTORY_KEY);
-                    let historyArray = historyData ? JSON.parse(historyData) : [];
-                    const newIndex = historyArray.length + 1;
-                    historyArray.push({
-                        index: newIndex,
-                        projectName: selectedProject.textContent,
-                        controlPrice: controlPrice.toFixed(2),
-                        zValue: zValue.toFixed(2),
-                        coefficient: coefficient.toFixed(2),
-                        finalPrice: finalPrice.toFixed(2),
-                        timestamp: timestamp
-                    });
-                    localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArray));
-
-                    // 重新加载历史记录
-                    loadHistory();
-
-                    // 显示提示框
-                    showToast('计算完成，请下滑查看历史报价');
-                }, 2000);
-            }
-
             // 项目选择事件
             projectSelect.addEventListener('change', function () {
-                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
-                controlPriceInput.value = selectedProject.getAttribute('data-control');
-                zValueInput.value = selectedProject.getAttribute('data-z');
+                const selectedOption = this.options[this.selectedIndex];
+                controlPriceInput.value = selectedOption.getAttribute('data-control');
+                zValueInput.value = selectedOption.getAttribute('data-z');
             });
 
-            // 计算按钮点击事件
-            calculateBtn.addEventListener('click', calculateQuote);
+            // 计算报价事件
+            calculateBtn.addEventListener('click', function () {
+                const selectedOption = projectSelect.options[projectSelect.selectedIndex];
+                if (selectedOption.value === '') {
+                    showToast('请选择项目');
+                    return;
+                }
+                const controlPrice = parseFloat(controlPriceInput.value);
+                const zValue = parseFloat(zValueInput.value);
+                const coefficient = parseFloat(coefficientInput.value);
 
-            // 批量上传文件事件
-            batchFileInput.addEventListener('change', function () {
-                const file = this.files[0];
-                if (file) {
-                    batchFileName.textContent = file.name;
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        const content = e.target.result;
-                        const lines = content.split('\n');
-                        const results = [];
-                        lines.forEach(line => {
-                            const coefficient = parseFloat(line.trim());
-                            if (!isNaN(coefficient) && coefficient >= 0.87 && coefficient <= 0.97) {
-                                const selectedProject = projectSelect.options[projectSelect.selectedIndex];
-                                const controlPrice = parseFloat(selectedProject.getAttribute('data-control'));
-                                const zValue = parseFloat(selectedProject.getAttribute('data-z'));
-                                const finalPrice = (controlPrice - zValue) * coefficient + zValue;
-                                results.push({
-                                    coefficient: coefficient.toFixed(2),
-                                    finalPrice: finalPrice.toFixed(2)
+                if (isNaN(controlPrice) || isNaN(zValue) || isNaN(coefficient)) {
+                    showToast('输入值无效');
+                    return;
+                }
+
+                calculatingOverlay.classList.add('active');
+                setTimeout(() => {
+                    calculatingOverlay.classList.remove('active');
+                    const final = (controlPrice - zValue) * coefficient + zValue;
+
+                    // 显示单次计算结果
+                    singleProjectName.textContent = selectedOption.text;
+                    singleControlPrice.textContent = controlPrice;
+                    singleZValue.textContent = zValue;
+                    singleCoefficient.textContent = coefficient;
+                    singleFinalPrice.textContent = final;
+                    singleResult.classList.add('show');
+
+                    // 显示计算结果
+                    formulaControl.textContent = controlPrice;
+                    formulaZ.textContent = zValue;
+                    formulaCoefficient.textContent = coefficient;
+                    formulaZ2.textContent = zValue;
+                    finalPrice.textContent = final;
+                    result.classList.add('show');
+
+                    // 添加历史记录
+                    const now = new Date();
+                    const time = now.toLocaleString();
+                    const newRow = historyTable.insertRow();
+                    const cells = [
+                        historyTable.rows.length,
+                        selectedOption.text,
+                        controlPrice,
+                        zValue,
+                        coefficient,
+                        final,
+                        time,
+                        '<button class="delete-btn">删除</button>'
+                    ];
+                    cells.forEach((cellText, index) => {
+                        const cell = newRow.insertCell(index);
+                        cell.textContent = cellText;
+                    });
+
+                    // 移动端历史记录
+                    const record = document.createElement('div');
+                    record.classList.add('record');
+                    record.innerHTML = `
+                        <div class="record-header">
+                            <span class="record-id">记录 #${historyTable.rows.length}</span>
+                            <button class="delete-btn">删除</button>
+                        </div>
+                        <div class="record-details">
+                            <div class="detail-item">
+                                <div class="detail-label">项目名称</div>
+                                <div class="detail-value">${selectedOption.text}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">控制价</div>
+                                <div class="detail-value">${controlPrice}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Z值</div>
+                                <div class="detail-value">${zValue}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">系数</div>
+                                <div class="detail-value">${coefficient}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">最终报价</div>
+                                <div class="detail-value">${final}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">计算时间</div>
+                                <div class="detail-value">${time}</div>
+                            </div>
+                        </div>
+                    `;
+                    mobileHistory.appendChild(record);
+
+                    // 删除历史记录事件
+                    const deleteBtns = document.querySelectorAll('.delete-btn');
+                    deleteBtns.forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const row = this.closest('tr');
+                            if (row) {
+                                const index = row.rowIndex - 1;
+                                historyTable.deleteRow(index);
+                                mobileHistory.children[index].remove();
+                                // 更新序号
+                                Array.from(historyTable.rows).forEach((row, i) => {
+                                    row.cells[0].textContent = i + 1;
                                 });
                             }
                         });
-
-                        if (results.length > 0) {
-                            let batchResultHTML = '<table class="batch-results"><thead><tr><th>系数</th><th>最终报价</th></tr></thead><tbody>';
-                            results.forEach(result => {
-                                batchResultHTML += `<tr><td>${result.coefficient}</td><td>${result.finalPrice}</td></tr>`;
-                            });
-                            batchResultHTML += '</tbody></table>';
-                            showToast('批量计算完成，结果如下：' + batchResultHTML);
-                        } else {
-                            showToast('文件中没有有效的系数。');
-                        }
-                    };
-                    reader.readAsText(file);
-                }
+                    });
+                }, 2000);
             });
-
-            // 下载历史记录
-            document.getElementById('download-history').addEventListener('click', function () {
-                const password = prompt('请输入导出密码：');
-                if (password === EXPORT_PASSWORD) {
-                    const historyData = localStorage.getItem(HISTORY_KEY);
-                    if (historyData) {
-                        const historyArray = JSON.parse(historyData);
-                        let csvContent = "序号,项目名称,控制价,Z值,系数,最终报价,计算时间\n";
-                        historyArray.forEach(item => {
-                            csvContent += `${item.index},${item.projectName},${item.controlPrice},${item.zValue},${item.coefficient},${item.finalPrice},${item.timestamp}\n`;
-                        });
-                        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-                        const link = document.createElement('a');
-                        if (link.download !== undefined) {
-                            const url = URL.createObjectURL(blob);
-                            link.setAttribute('href', url);
-                            link.setAttribute('download', 'quote_history.csv');
-                            link.style.visibility = 'hidden';
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        }
-                    }
-                } else {
-                    showToast('密码错误，请联系管理员获取正确密码。');
-                }
-            });
-
-            // 初始化
-            loadHistory();
         });
     </script>
 </body>
