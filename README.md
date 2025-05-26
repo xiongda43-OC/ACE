@@ -1032,12 +1032,12 @@
                 <label for="project">选择项目:</label>
                 <select id="project">
                     <option value="">-- 请选择项目 --</option>
-                    <option value="project1" data-control="10571769.22" data-z="441012.36">上饶微短剧影视工厂建设项目室外配套工程</option>
-                    <option value="project2" data-control="8748876.85" data-z="200000">上饶经开区兴业大道北侧100亩工业项目土地平整工程</option>
-                    <option value="project3" data-control="11165828.06" data-z="354904.09">宜春黄金堆事故应急池及汇锦路排水改造工程</option>
-                    <option value="project4" data-control="11754977.84" data-z="472799.15">上饶广丰区石灰石产业园土石方开挖平整项目</option>
-                    <option value="project5" data-control="26387384.71" data-z="0">九江石化产业园二期基础配套设施建设项目纬二路、经七路工程招标项目</option>
-                    <option value="project6" data-control="15093252.44" data-z="1849115.82">萍乡市芦溪中学科技楼建设项目</option>
+                    <option value="project1" data-control="60271982.91" data-z="4604933.97">5.27-万安县枧头镇小微产业园标准厂房建设项目(一期)一标段</option>
+                    <option value="project2" data-control="9037108.55" data-z="870755.2">5.27-横峰三中宿舍楼建设项目</option>
+                    <option value="project3" data-control="2254316.76" data-z="94883.13">5.27-新干县中山路小区及温馨片区老旧小区改造项目</option>
+                    <option value="project4" data-control="暂无" data-z="暂无">5.27-南昌经开区曰修路更新改造工程</option>
+                    <option value="project5" data-control="4124563.18" data-z="0">5.27-2025年崇义县城区市政基础设施维修工程</option>
+                    <option value="project6" data-control="64160060.35" data-z="2677000">5.27大余县再生水利用配置试点项目</option>
                 </select>
             </div>
 
