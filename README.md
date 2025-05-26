@@ -1031,13 +1031,18 @@
             <div class="input-group">
                 <label for="project">选择项目:</label>
                 <select id="project">
-                    <option value="">-- 请选择项目 --</option>
+                    <option value="">-- 5.27开标项目 --</option>
                     <option value="project1" data-control="60271982.91" data-z="4604933.97">5.27-万安县枧头镇小微产业园标准厂房建设项目(一期)一标段</option>
                     <option value="project2" data-control="9037108.55" data-z="870755.2">5.27-横峰三中宿舍楼建设项目</option>
                     <option value="project3" data-control="2254316.76" data-z="94883.13">5.27-新干县中山路小区及温馨片区老旧小区改造项目</option>
                     <option value="project4" data-control="暂无" data-z="暂无">5.27-南昌经开区曰修路更新改造工程</option>
                     <option value="project5" data-control="4124563.18" data-z="0">5.27-2025年崇义县城区市政基础设施维修工程</option>
                     <option value="project6" data-control="64160060.35" data-z="2677000">5.27大余县再生水利用配置试点项目</option>
+                    <option value="">-- 5.28开标项目 --</option>
+                    <option value="project1" data-control="113659911.86" data-z="353241.46">5.28-鄱阳投资发展集团有限公司金源粮库高标准粮仓建设项目</option>
+                    <option value="project2" data-control="2163313.96" data-z="91191.9">5.28-新干县城北润清花园小区及长运宿舍片区老旧小区改造项目</option>
+                    <option value="project3" data-control="30796750.79" data-z="1208803.26">5.28-上饶微短剧影视工厂建设项目5#、6#、7#、8#、9#、10#、12#楼外立面改造工程</option>
+                    <option value="project4" data-control="40851784.96" data-z="3310000">5.28-湖口县农业产业融合发展示范园建设项目</option>
                 </select>
             </div>
 
