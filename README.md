@@ -1031,27 +1031,31 @@
             <div class="input-group">
                 <label for="project">选择项目:</label>
                 <select id="project">
-                    <option value="">-- 5.29开标项目 --</option>
-                    <option value="project1" data-control="4758274.45" data-z="0">5.29-创新小镇东华理工宿舍及教学楼装修项目</option>
-                    <option value="project2" data-control="6922982.09" data-z="596000">5.29-新干县第二中学教学楼建设项目3号教学楼</option>
-                    <option value="project3" data-control="3319605.34" data-z="130000">5.29-赣州经济技术开发区中恒汽车交易中心项目1#汽车交易楼(六至八层)精装修工程</option>
-                    <option value="project4" data-control="6644295" data-z="0">5.29-拾方光影宿舍改造二期工程</option>
-                    <option value="project5" data-control="14129931.31" data-z="0">5.29-德兴市粮食购销总公司香屯粮库高标准粮仓建设项目</option>
-                    <option value="project6" data-control="30944987.49" data-z="1933000">5.29-萍乡市莲花县城区西南片区排水防涝建设项目重发公告第2次</option>
-                    <option value="">-- 5.30开标项目 --</option>
-                    <option value="project7" data-control="59632721.05" data-z="4440787.22">5.30-高安市人民医院附属分院建设项目重发公告第1次</option>
-                    <option value="project8" data-control="13978705.97" data-z="621230.54">5.30-吉安市新干县新干中学新建综合楼和食堂改造建设项目(食堂改造)</option>
-                    <option value="project9" data-control="12813168.72" data-z="526921.35">5.30-德兴市城区垃圾中转站及分拣中心更新改造建设项目-分拣中心部分主体及配套工程(3标段)</option>
-                    <option value="project10" data-control="13805303.9" data-z="1244000">5.30-万安县城乡供水提升工程(宝山水厂及韶口水厂工艺设备)</option>
-                    <option value="project11" data-control="62256290.41" data-z="534400">5.30-贵溪市城市内涝治理一期(茗芗佳苑及信江明珠)项目</option>
-                    <option value="project12" data-control="22764048.92" data-z="1919362.47">5.30-江西省上饶市婺源县珍珠山体育公园建设项目</option>
-                    <option value="project13" data-control="11873878.34" data-z="2160000">5.30-信丰县年处理80万吨建筑垃圾资源化项目</option>
-                    <option value="project14" data-control="14412568.33" data-z="600958.35">5.30-遂川县伟业公园路小区2025年老旧小区改造项目</option>
-                    <option value="project15" data-control="54726594.29" data-z="5646600">5.30-共青城市高新区光电产业园二期项目(一标段)</option>
-                    <option value="project16" data-control="11457481.72" data-z="463916.49">5.30-上饶市广丰区赣东北国防人防训练基地建设项目装饰装修项目</option>
-                    <option value="project17" data-control="8596918.6" data-z="0">5.30-新港镇细山公墓停车场及吊唁厅工程新港镇细山公墓停车场及吊唁厅项目</option>
-                    <option value="project18" data-control="7451123.39" data-z="1100000">5.30-鄱阳县高家洼集贸市场建设工程鄱阳县高家洼集贸市场建设项目</option>
-                    <option value="project19" data-control="5293222.06" data-z="300000">5.30-万载县城南中等专业学校新建项目-新建土方工程</option>
+                    <option value="">-- 6.3开标项目 --</option>
+                    <option value="project1" data-control="6839046.18" data-z="260000">6.3-赣州潜行创新科技家用储能电池产业基地和清洁机器人产业基地代建厂房及配套设施项目1#~5#楼幕墙工程</option>
+                    <option value="project2" data-control="132971673.74" data-z="2933831.87">6.3-吉安青原区梅林学校建设项目</option>
+                    <option value="project3" data-control="5245479.42" data-z="451344.13">6.3-上饶上饶市信州区三百里田园综合开发项目配套设施项目</option>
+                    <option value="project4" data-control="13570575.52" data-z="0">6.3-吉安吉州区北门街道2025年老旧小区改造工程</option>
+                    <option value="project5" data-control="14129931.31" data-z="0">6.3-吉安万安县城区停车场一期项目</option>
+                    <option value="project6" data-control="8916266.13" data-z="0">6.3-鹰潭贵溪市规划路环二路新建项目</option>
+                    <option value="project7" data-control="10077588.36" data-z="458089.22">6.3-上饶婺源县工业园拓展区标准化厂房西区配套设施建设项目</option>
+                    <option value="project8" data-control="24469555.82" data-z="0">6.3-宜春高安市八景镇八景煤业独立矿区改造项目二期高安市八景镇八景煤业独立矿区改造二期项目</option>
+                    <option value="project9" data-control="30141582.04" data-z="0">6.3-抚州市钟岭锦园梦湖锦园部分保障性租赁住房装修工程(一期)(一标段)</option>
+                    <option value="project10" data-control="15377427.2" data-z="575000">6.3-吉安市吉安县第二中学食堂宿舍楼建设项目</option>
+                    <option value="project11" data-control="15248395.58" data-z="1045000">6.3-赣州瑞金市生活垃圾焚烧发电项目二期项目设备安装工程</option>
+                    <option value="">-- 6.4开标项目 --</option>
+                    <option value="project12" data-control="186499872.16" data-z="10566970">6.4-宜春袁州区下浦安置区锦兴小区A区建设项目</option>
+                    <option value="project13" data-control="11126323.55" data-z="400000">6.4-吉安井冈山经开区机器人智造产业园建设项目厂房一期工程</option>
+                    <option value="project14" data-control="4325084.14" data-z="0">6.4-九江湖口县第二中学教师办公室和东阶梯教室改造及校园环境提升等改造项目</option>
+                    <option value="project15" data-control="5365409.02" data-z="216000">6.4-赣州兴国县2024年卫健系统基层保障性租赁住房建设改造项目</option>
+                    <option value="project16" data-control="6476772.79" data-z="0">6.4-抚州钟岭锦园梦湖锦园部分保障性租赁住房装修工程(一期)(二标段)</option>
+                    <option value="project17" data-control="18826811.39" data-z="0">6.4-鹰潭贵溪市黄土港入信江缓冲区域生态修复项目二期工程</option>
+                    <option value="project18" data-control="4471908.29" data-z="345039.2">6.4-鹰潭余江区柴集巷公共服务设施提升改造项目</option>
+                    <option value="project19" data-control="18723330.48" data-z="600000">6.4-全南县大吉山钨矿独立工矿区避险搬迁安置房桃江源小区建设二期工程</option>
+                    <option value="project19" data-control="6248510.03" data-z="242361.26">6.4-上饶鄱阳县公安局鄱阳湖工业园派出所业务用房新建项目</option>
+                    <option value="project19" data-control="22246832.75" data-z="1510000">6.4-吉安县城南全民健身中心项目(主体工程)</option>
+                    <option value="project19" data-control="20915967.82" data-z="553173.05">6.4-上饶德兴大茅山景区基础服务和旅游配套设施建设项目——基础服务设施二期</option>
+                    <option value="project19" data-control="63863646.07" data-z="答疑与招标文件有冲突">6.4-赣州江西师大附中赣江院分校高中部建设项目二期工程</option>
                 </select>
             </div>
 
